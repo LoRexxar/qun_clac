@@ -23,7 +23,7 @@ def main():
 
 	base_shouru = 8572-3000
 	base_jidian = 3.5
-	base_caichan = 2618181
+	base_cunkuan = 2618181
 	base_dianzi = 20000
 
 	username = input("Username: ")
@@ -44,11 +44,11 @@ def main():
 		__point__ += zhichu_point
 
 
-	caichan = input("你的个人可支配财产总值约为多少(人民币元): ")
-	if float(caichan) == 0:
+	cunkuan = input("你的个人可支配存款约为多少(人民币元): ")
+	if float(cunkuan) == 0:
 		print("别骗自己了，你的财产总值不可能是0")
-		caichan = input("你的个人可支配财产总值约为多少(人民币元): ")
-	caichan_point = float(caichan)/base_caichan*0.3*40
+		cunkuan = input("你的个人可支配存款约为多少(人民币元): ")
+	cunkuan_point = float(cunkuan)/base_cunkuan*0.3*40
 	__point__+=caichan_point
 
 	print("你居住在几线城市?(1-5): ")
