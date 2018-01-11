@@ -71,7 +71,7 @@ def main():
 	dianzi_point = int(dianzi)/base_dianzi*0.3*40
 	__point__+=dianzi_point
 
-	print("你的生活标准指数为{point}").format(point = __point__)
+	print("你的生活标准指数为{point}".format(point = __point__))
 
 	age = input("你今年多少岁了(周岁)? ")
 	if 0>int(age) or int(age)>60:
