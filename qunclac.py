@@ -124,8 +124,8 @@ def main():
 	if float(have_time)<0 or float(have_time)>24:
 		print("你再瞎填我就掀桌子了啊，(╯‵□′)╯︵┻━┻")
 		have_time = input("日均上课/上班时间(只计入工作日)?(0-24): ")
-	time_point = (24-have_time)
-	__point__ += float(have_time)
+	time_point = (24-float(have_time))
+	__point__ += float(time_point)
 
 
 	have_pet = input("你有宠物吗?(1 or 0): ")
