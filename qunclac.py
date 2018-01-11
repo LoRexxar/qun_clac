@@ -93,21 +93,21 @@ def main():
 	if int(is_biye) not in [1,0]:
 		print("你再瞎填我就掀桌子了啊，(╯‵□′)╯︵┻━┻")
 		is_biye = input("你毕业了吗?(1 or 0): ")
-	if is_biye:
+	if int(is_biye):
 		__point__+=2
 
 	is_cmu = input("你是在cmu上学吗?(1 or 0): ")
 	if int(is_cmu) not in [1,0]:
 		print("你再瞎填我就掀桌子了啊，(╯‵□′)╯︵┻━┻")
 		is_cmu = input("你是在cmu上学吗?(1 or 0): ")
-	if is_cmu:
+	if int(is_cmu):
 		__point__+=2
 
 	have_meizi = input("你有妹子吗?(1 or 0): ")
 	if int(have_meizi) not in [1,0]:
 		print("你再瞎填我就掀桌子了啊，(╯‵□′)╯︵┻━┻")
 		have_meizi = input("你有妹子吗?(1 or 0): ")
-	if have_meizi:
+	if int(have_meizi):
 		__point__+=10
 
 
@@ -129,7 +129,7 @@ def main():
 	if int(have_pet) not in [1,0]:
 		print("你再瞎填我就掀桌子了啊，(╯‵□′)╯︵┻━┻")
 		have_pet = input("你有宠物吗?(1 or 0): ")
-	if have_pet:
+	if int(have_pet):
 		__point__+=10
 
 
