@@ -21,7 +21,7 @@ def main():
 	print(__introduction__)
 
 
-	base_shouru = 8572
+	base_shouru = 8572-3000
 	base_jidian = 3.5
 	base_caichan = 2618181
 	base_dianzi = 20000
@@ -33,19 +33,21 @@ def main():
 	print("本计算规则分为生活标准指数、感情生活指数，基准分为100，不设上限")
 
 	shouru = input("你的月收入是多少(人民币元): ")
-	shouru_point = float(shouru)/base_shouru*0.4*40
-	__point__+=shouru_point
 
 	if float(shouru) == 0:
 		jidian = input("如果没有月收入，那么你上一次考试综合绩点为(0-5): ")
 		jidian_point = float(jidian)/base_jidian*0.4*40
 		__point__+=jidian_point
+	else:
+		zhichu = input("你的每月固定支出约为多少(人民币元): ")
+		zhichu_point = ((float(shouru)-float(zhichu))/base_shouru)*0.4*40
+		__point__ += zhichu_point
 
 
-	caichan = input("你的财产总值约为多少(人民币元): ")
+	caichan = input("你的个人可支配财产总值约为多少(人民币元): ")
 	if float(caichan) == 0:
 		print("别骗自己了，你的财产总值不可能是0")
-		caichan = input("你的财产总值约为多少(人民币元): ")
+		caichan = input("你的个人可支配财产总值约为多少(人民币元): ")
 	caichan_point = float(caichan)/base_caichan*0.3*40
 	__point__+=caichan_point
 
@@ -118,10 +120,11 @@ def main():
 		__point__ += float(love_point)
 
 
-	have_time = input("自由支配时间占比怎么样?(1-10): ")
-	if float(have_time)<1 or float(have_time)>10:
+	have_time = input("日均上课/上班时间(只计入工作日)?(0-24): ")
+	if float(have_time)<0 or float(have_time)>24:
 		print("你再瞎填我就掀桌子了啊，(╯‵□′)╯︵┻━┻")
-		have_time = input("自由支配时间占比怎么样?(1-10): ")
+		have_time = input("日均上课/上班时间(只计入工作日)?(0-24): ")
+	time_point = (24-have_time)
 	__point__ += float(have_time)
 
 
