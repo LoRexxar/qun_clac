@@ -49,7 +49,7 @@ def main():
 		print("别骗自己了，你的财产总值不可能是0")
 		cunkuan = input("你的个人可支配存款约为多少(人民币元): ")
 	cunkuan_point = float(cunkuan)/base_cunkuan*0.3*40
-	__point__+=caichan_point
+	__point__+=cunkuan_point
 
 	print("你居住在几线城市?(1-5): ")
 	cont = input("北上广深为1线，杭州为2线")
